@@ -8,7 +8,7 @@ for i in range(10):
 print(f"колво четных цифр: {count}"
 prob_single=count/10
 
-prob_double=prob_single* prob_singel
+prob_double=prob_single* prob_single
 
 print(f"вероятность: {count}"
     
