@@ -10,5 +10,5 @@ prob_single=count/10
 
 prob_double=prob_single* prob_single
 
-print(f"вероятность: {count}")
+print(f"вероятность: {prob_double}")
     
