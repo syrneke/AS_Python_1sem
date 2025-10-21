@@ -2,7 +2,7 @@
 A = 2
 B = 5
 sum_square = 0
-for numbers in range(A,B+1):
+for number in range(A,B+1):
   square = number * number
   sum_2 += square
   print(f"{number}**2 = {square}")
