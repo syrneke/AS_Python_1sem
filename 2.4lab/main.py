@@ -1,13 +1,13 @@
 #вар9
 # а) Функция capitalize_words
 def capitalize_words(text, separator=' '):
-    """Преобразует каждое слово: первая буква заглавная, остальные строчные"""
+    
     words = text.split(separator)
     return separator.join(word.capitalize() for word in words)
 
 # б) Функция filter_elements
 def filter_elements(list1, list2, filter_function=None):
-    """Фильтрует элементы из обоих списков"""
+   
     combined = list1 + list2
     if filter_function is None:
         return combined
@@ -15,7 +15,7 @@ def filter_elements(list1, list2, filter_function=None):
 
 # в) Функция merge_dictionaries
 def merge_dictionaries(*dicts):
-    """Объединяет словари, при конфликте берёт значение из последнего"""
+    
     result = {}
     for d in dicts:
         result.update(d)
@@ -23,7 +23,7 @@ def merge_dictionaries(*dicts):
 
 # г) Функция unique_keys
 def unique_keys(*dicts):
-    """Возвращает ключи, которые встречаются только в одном словаре"""
+    
     from collections import Counter
     
     # Считаем сколько раз встречается каждый ключ
