@@ -1,5 +1,11 @@
 #вар9
 
+def task_a(dictionary):
+    """Перебирает все ключи и значения в словаре"""
+    print("Задача а):")
+    for key, value in dictionary.items():
+        print(f"key: {key}, value: {value}")
+
 def task_b(list_of_dicts, target_key):
     """Вычисляет сумму значений по определенному ключу в списке словарей"""
     print("\nЗадача б):")
