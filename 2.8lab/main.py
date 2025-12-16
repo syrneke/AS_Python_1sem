@@ -1,6 +1,5 @@
 #вар 9
 def find_max_abs_odd(filename):
-    """Краткая версия программы"""
     try:
         with open(filename, 'r') as f:
             # Читаем все числа из файла
