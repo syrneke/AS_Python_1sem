@@ -1,13 +1,11 @@
 #вар9
 
 def task_a(dictionary):
-    """Перебирает все ключи и значения в словаре"""
     print("Задача а):")
     for key, value in dictionary.items():
         print(f"key: {key}, value: {value}")
 
 def task_b(list_of_dicts, target_key):
-    """Вычисляет сумму значений по определенному ключу в списке словарей"""
     print("\nЗадача б):")
     total = 0
     for item in list_of_dicts:
@@ -16,7 +14,6 @@ def task_b(list_of_dicts, target_key):
     return total
 
 def task_c(students_dict):
-    """Фильтрует данные, оставляя только рост учащихся"""
     print("\nЗадача в):")
     filtered_dict = {}
     for name, data in students_dict.items():
