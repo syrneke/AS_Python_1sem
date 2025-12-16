@@ -1,6 +1,6 @@
 #вар9
 def is_symmetric(m):
-    """Проверяет симметричность матрицы"""
+    
     n = len(m)
     for i in range(n):
         for j in range(i+1, n):
@@ -9,7 +9,7 @@ def is_symmetric(m):
     return True
 
 def process_matrices():
-    """Основная функция в краткой форме"""
+    
     with open("matrices.txt", 'r') as f:
         k = int(f.readline())
         mats = []
@@ -25,7 +25,7 @@ def process_matrices():
         else:
             non_sym.append((n, mat))
     
-    # Запись в файлы
+   
     for name, data in [("sym.txt", sym), ("non_sym.txt", non_sym)]:
         with open(name, 'w') as f:
             f.write(f"{len(data)}\n")
