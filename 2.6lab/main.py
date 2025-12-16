@@ -1,24 +1,8 @@
 #вар9
-"""
-Модуль file_operations.py
-Содержит функции для работы с текстовыми файлами:
-1. Удаление цифр из текстового файла
-2. Вычисление количества символов в текстовом файле
-3. Вычисление количества строк в текстовом файле
-"""
+
 
 def remove_digits_from_file(input_file, output_file=None):
-    """
-    Удаляет все цифры из текстового файла
     
-    Аргументы:
-    input_file (str): путь к исходному файлу
-    output_file (str, optional): путь к выходному файлу. 
-                                Если не указан, создается файл с префиксом 'no_digits_'
-    
-    Возвращает:
-    str: путь к созданному файлу без цифр
-    """
     try:
         # Читаем исходный файл
         with open(input_file, 'r', encoding='utf-8') as file:
@@ -50,17 +34,7 @@ def remove_digits_from_file(input_file, output_file=None):
 
 
 def count_characters_in_file(file_path, include_spaces=True, include_newlines=False):
-    """
-    Вычисляет количество символов в текстовом файле
-    
-    Аргументы:
-    file_path (str): путь к файлу
-    include_spaces (bool): включать ли пробелы в подсчет (по умолчанию True)
-    include_newlines (bool): включать ли символы новой строки (по умолчанию False)
-    
-    Возвращает:
-    int: количество символов в файле
-    """
+   
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
@@ -84,15 +58,7 @@ def count_characters_in_file(file_path, include_spaces=True, include_newlines=Fa
 
 
 def count_lines_in_file(file_path):
-    """
-    Вычисляет количество строк в текстовом файле
-    
-    Аргументы:
-    file_path (str): путь к файлу
-    
-    Возвращает:
-    int: количество строк в файле
-    """
+   
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             lines = file.readlines()
@@ -110,12 +76,7 @@ def count_lines_in_file(file_path):
 
 
 def analyze_file(file_path):
-    """
-    Анализирует файл и выводит все статистики
     
-    Аргументы:
-    file_path (str): путь к файлу
-    """
     print(f"\nАнализ файла: {file_path}")
     print("=" * 50)
     
@@ -162,9 +123,6 @@ Last line without numbers."""
     if os.path.exists(output_file):
         os.remove(output_file)
 
-"""
-Пример использования модуля file_operations.py
-"""
 
 # Импортируем наш модуль
 import file_operations
@@ -218,6 +176,3 @@ def main():
         
         else:
             print("Неверный выбор. Попробуйте еще раз.")
-
-if __name__ == "__main__":
-    main()
