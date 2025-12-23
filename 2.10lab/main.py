@@ -21,7 +21,6 @@ except ValueError as e:
     print("Ошибка:", e)
 
 print("ЗАДАЧА В")
-# Задача в
 try:
     n = int(input("Введите число для факториала: ")) 
     assert n >= 0, "Отрицательное число"
