@@ -1,44 +1,25 @@
 #вар9
+#ЗАДАЧАA 
+dict1 = {'a':1, 'b':2, 'c':3, 'd':4}
+print("Задача А")
+for k in dict1:
+    v = dict1[k]
+    print(f"key: {k}, value: {v}")
 
-def task_a(dictionary):
-    print("Задача а):")
-    for key, value in dictionary.items():
-        print(f"key: {key}, value: {value}")
+#ЗАДАЧАБ 
+list1 = [{'a': 1}, {'a': 2}, {'a': 3}, {'b': 1}]
+print("Задача Б")
+s = 0 
+for d in list1:
+    if 'a' in d:
+        s = s + d['a']
+print(f"Сумма: {s}")
 
-def task_b(list_of_dicts, target_key):
-    print("\nЗадача б):")
-    total = 0
-    for item in list_of_dicts:
-        if target_key in item:
-            total += item[target_key]
-    return total
-
-def task_c(students_dict):
-    print("\nЗадача в):")
-    filtered_dict = {}
-    for name, data in students_dict.items():
-        filtered_dict[name] = {'рост': data['рост']}
-    return filtered_dict
-
-# Примеры использования
-if __name__ == "__main__":
-    # Задача а)
-    sample_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-    task_a(sample_dict)
-    
-    # Задача б)
-    list_dicts = [{'a': 1}, {'a': 2}, {'a': 3}, {'b': 1}]
-    key_to_sum = 'a'
-    result_b = task_b(list_dicts, key_to_sum)
-    print(f"Сумма значений по ключу '{key_to_sum}': {result_b}")
-    
-    # Задача в)
-    students = {
-        'Иван': {'рост': 170, 'вес': 70},
-        'Михаил': {'рост': 180, 'вес': 75},
-        'Анна': {'рост': 165, 'вес': 60}
-    }
-    result_c = task_c(students)
-    print("Отфильтрованные данные (только рост):")
-    for name, data in result_c.items():
-        print(f"{name}: {data}")
+#ЗАДАЧАВ
+students = {'Иван': {'рост':170, 'вес':70}, 'Михаил': {'рост':180, 'вес':75}}
+print("Задача В")
+new_dict = {}
+for name in students:
+    height_dict = {'рост': students[name]['рост']}
+    new_dict[name] = height_dict
+print(f"Результат: {new_dict}")
